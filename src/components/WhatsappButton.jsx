@@ -17,8 +17,8 @@ const WhatsAppButton = ({ phoneNumber, message }) => {
       target="_blank"
       rel="noopener noreferrer"
       // Tailwind CSS classes for fixed positioning, styling, and bottom-left placement
-      className="fixed bottom-17 right-14 z-50 
-                 bg-green-500 hover:bg-green-600 
+      className="fixed bottom-10 right-5 z-50 
+                 bg-[#2D3353] 
                  text-white font-bold py-3 px-3 rounded-full 
                  shadow-lg transition duration-300 ease-in-out
                  flex items-center space-x-2"

@@ -4,12 +4,12 @@ import { fadeIn, textVariant } from "../utils/motion";
 const PurposeSection = () => {
   const features = [
     {
-      icon: "🟣", // Replace with your actual icon component or image
+      icon: "", // Replace with your actual icon component or image
       title: "Built for impact",
       description: "We help you start or advance your career by learning high-demand skills in a fast-paced environment"
     },
     {
-      icon: "🔴", // Replace with your actual icon component or image
+      icon: "", // Replace with your actual icon component or image
       title: "Building the Future Together",
       description: "We offer transformative education, empowering students with the skills and confidence to thrive in the tech industry"
     }
@@ -27,13 +27,13 @@ const PurposeSection = () => {
           <motion.div variants={fadeIn('right', 0.3)}>
             <motion.div 
               variants={fadeIn('up', 0.4)}
-              className="text-sm text-purple-600 font-medium mb-2"
+              className="text-sm text-[#373435] font-medium mb-2"
             >
               ACHIEVE MORE
             </motion.div>
             <motion.h2 
               variants={textVariant(0.5)}
-              className="text-3xl md:w-4/5 md:text-4xl font-bold text-gray-900"
+              className="text-3xl md:w-4/5 md:text-4xl font-bold text-[#373435]"
             >
              Gain valuable career skills
             </motion.h2>

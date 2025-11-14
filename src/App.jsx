@@ -66,9 +66,9 @@ const App = () => {
               <CompanyLogo />
               <PurposeSection />
               <CourseSection />
+               <TestimonialsSection />
               <NextSessions />
               <JoinTrainingBanner />
-              <TestimonialsSection />
               <Footer />
 
             </div>

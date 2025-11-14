@@ -12,7 +12,7 @@ const ActionButtons = ({ phoneNumber = '2347018952882', message = 'Hello, I woul
         href={whatsappLink}
         target="_blank" // Opens the link in a new tab
         rel="noopener noreferrer" // Security best practice for target="_blank"
-        className="flex items-center justify-center px-12 py-4 bg-green-600 text-white font-semibold rounded-lg text-lg hover:bg-green-700 transition duration-300 shadow-md whitespace-nowrap" // Added whitespace-nowrap for better mobile layout
+        className="flex items-center justify-center px-12 py-4 bg-[#71e9bdc4]   text-#66D7AE font-semibold rounded-lg text-lg  transition duration-300 shadow-md whitespace-nowrap" // Added whitespace-nowrap for better mobile layout
       >
         <FaWhatsapp className="mr-3 text-xl" /> Let's Talk
       </a>

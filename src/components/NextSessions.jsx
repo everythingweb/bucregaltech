@@ -36,7 +36,7 @@ const NextSessions = () => {
             */
             className="w-full max-w-sm md:w-80 bg-white rounded-lg shadow-xl overflow-hidden flex flex-col transition duration-300 hover:shadow-2xl"
           >
-            <div className="bg-green-700 h-2"></div> {/* Top green line */}
+            <div className="bg-[#2D3353] h-2"></div> {/* Top deep blue line */}
             <div className="p-6 flex-grow flex flex-col justify-between">
               <div>
                 <h2 className="text-2xl font-bold text-gray-800 mb-6">{session.month}</h2>

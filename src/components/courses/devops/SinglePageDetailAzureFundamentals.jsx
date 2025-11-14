@@ -5,9 +5,9 @@ import NextSessions from '../../NextSessions';
 import { Link } from 'react-router-dom'; 
 import { FaClock, FaCalendarAlt, FaBook, FaMoon } from 'react-icons/fa'; 
 import Hero from '../../../assets/Data/DSC04370-3-1.png';
-import ActionButtons from '../../ActionButtons';
 import ai from '../../../assets/design/new.jpg';
 import BroadSkillShowcase from '../../BroadSkillShowcase'
+import { FaWhatsapp } from 'react-icons/fa';
 import { FaBolt, FaUsers, FaGraduationCap } from 'react-icons/fa'; // Importing icons from Font Awesome
 import ExpertImage from '../../../assets/Data/Rectangle.png'; // Adjust this path to your actual image
 
@@ -21,36 +21,36 @@ const CourseHeroSection = () => {
           {/* Left Content Area */}
          <div className="w-full md:w-[55%] p-6 md:p-8 flex flex-col justify-center">
               <nav className="text-sm font-montserrat mb-8 text-gray-500">
-          <Link to="/" className="hover:underline">Home</Link>   &gt; <span className="font-bold text-indigo-600">Azure Fundamentals Certification Preparation</span>
+          <Link to="/" className="hover:underline">Home</Link>   &gt; <span className="font-bold text-[#373435]">Azure Fundamentals Certification Preparation</span>
         </nav>
-            <h1 className="text-4xl md:text-4xl font-extrabold text-gray-900 leading-tight mb-4">
+            <h1 className="text-4xl md:text-4xl font-extrabold text-[#373435] leading-tight mb-4">
             Azure Fundamentals Certification Preparation
             </h1>
             <p className="text-3xl md:text-4xl font-bold text-green-700 mb-6">
              
             </p>
-            <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-8">
+            <p className="text-base md:text-lg text-[#373435] leading-relaxed mb-8">
          Gain a solid foundation in Microsoft Azure and get ready for your Azure Fundamentals Certification. Learn to manage core services, secure your data, and optimize cloud operations with confidence. </p>
 
             {/* Buttons */}
-          <ActionButtons />
+          <ActionButtons1 />
 
             {/* Course Details List */}
             <div className="space-y-4">
               <div className="flex items-center text-gray-700 text-lg">
-                <FaClock className="mr-4 text-green-600 text-2xl" />
+                <FaClock className="mr-4 text-[#2D3353] text-2xl" />
                 <span><strong className="font-semibold">Duration:</strong> 20 weeks</span>
               </div>
               <div className="flex items-center text-gray-700 text-lg">
-                <FaCalendarAlt className="mr-4 text-green-600 text-2xl" />
+                <FaCalendarAlt className="mr-4 text-[#2D3353] text-2xl" />
                 <span><strong className="font-semibold">Schedule:</strong> 12 hours/week</span>
               </div>
               <div className="flex items-center text-gray-700 text-lg">
-                <FaBook className="mr-4 text-green-600 text-2xl" />
+                <FaBook className="mr-4 text-[#2D3353] text-2xl" />
                 <span><strong className="font-semibold">Format:</strong> Available in-person and online</span>
               </div>
               <div className="flex items-center text-gray-700 text-lg">
-                <FaMoon className="mr-4 text-green-600 text-2xl" />
+                <FaMoon className="mr-4 text-[#2D3353] text-2xl" />
                 <span><strong className="font-semibold">Options:</strong> Evening classes available</span>
               </div>
             </div>
@@ -72,6 +72,27 @@ const CourseHeroSection = () => {
         </div>
       </div>
     </section>
+  );
+};
+const ActionButtons1 = ({ phoneNumber = '2347018952882', message = 'Hello, I would like to know more about the training.' }) => {
+  // WhatsApp link format: https://wa.me/PHONE_NUMBER?text=PRE_FILLED_MESSAGE
+  const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+  return (
+    <div className="flex flex-col sm:flex-row gap-4 mb-10">
+      {/* 1. WhatsApp Link Button (Changed from <button> to <a>) */}
+      <a 
+        href={whatsappLink}
+        target="_blank" // Opens the link in a new tab
+        rel="noopener noreferrer" // Security best practice for target="_blank"
+        className="flex items-center justify-center px-12 py-4 bg-[#2D3353]   text-[#fff] font-semibold rounded-lg text-lg  transition duration-300 shadow-md whitespace-nowrap" // Added whitespace-nowrap for better mobile layout
+      >
+        <FaWhatsapp className="mr-3 text-xl" /> Let's Talk
+      </a>
+      
+      {/* 2. Standard Button (Remains a <button>) */}
+     
+    </div>
   );
 };
 const GenerativeAICourseDetails = () => {
@@ -195,6 +216,7 @@ const GenerativeAICourseDetails = () => {
 };
 
 
+
 const ExpertSection = ({ imageUrl = ExpertImage }) => { // Added imageUrl prop with a default
   return (
     <section className="bg-gradient-to-br from-gray-50 to-orange-50 py-16 px-4 sm:px-6 lg:px-8">
@@ -210,21 +232,21 @@ const ExpertSection = ({ imageUrl = ExpertImage }) => { // Added imageUrl prop w
 
           <ul className="space-y-6">
             <li className="flex items-start text-gray-700">
-              <FaUsers className="mt-1 mr-3 text-green-600 text-2xl flex-shrink-0" />
+              <FaUsers className="mt-1 mr-3 text-[#2D3353] text-2xl flex-shrink-0" />
               <span>
                 Join small groups of 5 to 10 people for a personalized and
                 interaction-rich learning experience.
               </span>
             </li>
             <li className="flex items-start text-gray-700">
-              <FaBolt className="mt-1 mr-3 text-green-600 text-2xl flex-shrink-0" />
+              <FaBolt className="mt-1 mr-3 text-[#2D3353] text-2xl flex-shrink-0" />
               <span>
                 Benefit from the expertise and mentoring of our instructors
                 who will support you throughout your journey.
               </span>
             </li>
             <li className="flex items-start text-gray-700">
-              <FaGraduationCap className="mt-1 mr-3 text-green-600 text-2xl flex-shrink-0" />
+              <FaGraduationCap className="mt-1 mr-3 text-[#2D3353] text-2xl flex-shrink-0" />
               <span>
                 Receive support at every stage of your learning, from
                 introduction to advanced projects.

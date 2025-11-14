@@ -26,12 +26,7 @@ import design3 from '../assets/design/design3.jpg';
 // Define the structure for a single course
 const courseData = {
     // ... (Your courseData object remains the same)
-    'Artificial Intelligence': [
-        { level: 'Introduction', title: 'Generative AI Course', description: 'Learn generative AI for your life or business. In 10 weeks, get hands-on with AI tools and practical applications.', imageSrc: data1, route: '/generative-ai' },
-        { level: 'Introduction', title: 'Introduction to Artificial Intelligence', description: 'Unlock the power of artificial intelligence and gain hands-on experience with cutting-edge AI tools in just 3 months!', imageSrc: dev4, route: '/introduction-ai' },
-        { level: 'Introduction', title: 'Deep Learning - NVIDIA Certified', description: 'Master the fundamentals of deep learning and accelerate your career with our NVIDIA-certified training program.', imageSrc: deepLearningImage, route: '/deep-ai' },
-        { level: 'Advanced', title: 'Build your Product with AI tools', description: 'A 12-week no-code AI course that helps you build, validate, and launch your AI product from idea to business.', imageSrc: buildProductImage, route: '/build-ai' },
-    ],
+   
     'Cloud, DevOps and Cybersecurity': [
         { level: 'Introduction', title: 'Introduction to Cybersecurity', description: 'This program serves as an introductory course to the field of cybersecurity. By completing this track, you will acquire a solid understanding cybersecurity.', imageSrc: dev1, route: '/Introduction' },
         { level: 'Introduction', title: 'The DevOps Bootcamp: Kubernetes Certified', description: 'Master the fundamentals of DevOps and cloud-native technologies with our Kubernetes-certified training program.', imageSrc: dev2, route: '/TheDevOps' },
@@ -50,12 +45,7 @@ const courseData = {
         { level: 'Introduction', title: 'Introduction to Python', description: 'Start with our beginner-friendly course, where you’ll learn the basics to build your first Python app.', imageSrc: data2,route: '/IntroductionToPython' },
         { level: 'Introduction', title: 'Data Analytics – Microsoft Power BI Certified', description: 'Excel in data analytics with our Power BI Data Analyst training, ideal for professionals seeking Microsoft Power BI certification.', imageSrc: data1 ,route: '/DataAnalytics'},
     ],
-    'Marketing': [
-        { level: 'Advanced', title: 'Introduction to Social Media', description: 'Start your digital marketing journey with our social media course. Gain essential skills through hands-on learning and guidance from instructors.', imageSrc: data1,route: '/IntroductionToSocial' },
-        { level: 'Introduction', title: 'Performance Marketing – Meta Certified', description: 'Elevate your Meta platform marketing with our certified course. Learn effective strategies for measurable results.', imageSrc: market2 ,route: '/PerformanceMarketing'},
-        { level: 'Introduction', title: 'Digital Marketing Bootcamp', description: 'This 16-week course teaches key digital marketing skills, including SEO, SEM, UX/UI design, influencer marketing, and content creation.', imageSrc: market3,route: '/DigitalMarketing' },
-        { level: 'Advanced', title: 'E-commerce course: Build your online store', description: 'Ready to bring your business idea to life? Buc Regal Tech’s Shopify Beginner’s Guide will teach you everything you need.', imageSrc: market4 ,route: '/Ecommercecourse'},
-    ],
+    
     'Design': [
         { level: 'Advanced', title: 'UX & UI Design', description: 'Deepen your UX and UI skills with our advanced training. Elevate your proficiency for seamless digital experiences!', imageSrc: design1 ,route: '/UiUx'},
         { level: 'Advanced', title: 'Graphic Design – Adobe Certified', description: 'Elevate your graphic design skills with our specialized training. Become Adobe certified for advanced proficiency.', imageSrc: design2 ,route: '/GraphicDesign'},
@@ -65,20 +55,18 @@ const courseData = {
 
 // List of available course categories
 const courseCategories = [
-    { name: 'Artificial Intelligence', icon: '🧠' },
     { name: 'Cloud, DevOps and Cybersecurity', icon: '☁️' },
     { name: 'Software Development', icon: '💻' },
     { name: 'Data', icon: '📊' },
-    { name: 'Marketing', icon: '📈' },
-    { name: 'Design', icon: '🎨' },
+    { name: 'Design', icon: '🎨' }
 ];
 
 
 // --- Course Card Component (Unchanged) ---
 const CourseCard = ({ course }) => {
     const levelTagClasses = course.level === 'Advanced' 
-        ? 'bg-purple-800 text-white' 
-        : 'bg-purple-200 text-gray-800'; 
+        ? 'bg-[#2D3353] text-white' 
+        : 'bg-[#4F5580] text-white'; 
 
     return (
         <div className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col transition duration-300 hover:shadow-xl">
@@ -107,7 +95,7 @@ const CourseCard = ({ course }) => {
             <Link 
                 // Uses the 'route' field from the course data
                 to={course.route || '#'} 
-                className="w-full py-4 bg-black text-white text-base font-bold transition duration-200 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-50 text-center"
+                className="w-full py-4 bg-[#2D3353] text-white text-base font-bold transition duration-200 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-50 text-center"
             >
                 Learn more
             </Link>
@@ -151,7 +139,7 @@ const CourseSection = () => {
                             px-4 py-2 sm:px-6 sm:py-3 m-1 text-sm font-semibold rounded-full transition duration-300 ease-in-out flex items-center whitespace-nowrap
                             ${activeCategory === category.name
                                 // Active state
-                                ? 'bg-purple-600 text-white shadow-md hover:bg-purple-700'
+                                ? 'bg-[#2D3353] text-white shadow-md hover:bg-[#2D3353]'
                                 // Inactive state
                                 : 'bg-transparent text-gray-700 hover:bg-gray-200'
                             }

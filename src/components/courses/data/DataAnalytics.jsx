@@ -5,8 +5,7 @@ import NextSessions from '../../NextSessions';
 import { Link } from 'react-router-dom'; 
 import { FaClock, FaCalendarAlt, FaBook, FaMoon } from 'react-icons/fa'; 
 import Hero from '../../../assets/Data/data1.png';
-import ActionButtons from '../../ActionButtons';
-import ai from '../../../assets/design/new.jpg';
+import { FaWhatsapp } from 'react-icons/fa';import ai from '../../../assets/design/new.jpg';
 import BroadSkillShowcase from '../../BroadSkillShowcase'
 import { FaBolt, FaUsers, FaGraduationCap } from 'react-icons/fa'; // Importing icons from Font Awesome
 import ExpertImage from '../../../assets/Data/Rectangle.png'; // Adjust this path to your actual image
@@ -21,7 +20,7 @@ const CourseHeroSection = () => {
           {/* Left Content Area */}
          <div className="w-full md:w-[55%] p-6 md:p-8 flex flex-col justify-center">
               <nav className="text-sm font-montserrat mb-8 text-gray-500">
-          <Link to="/" className="hover:underline">Home</Link>   &gt; <span className="font-bold text-indigo-600">Data Analyst Course - Microsoft Power BI Certified</span>
+          <Link to="/" className="hover:underline">Home</Link>   &gt; <span className="font-bold text-[#2D3353]">Data Analyst Course - Microsoft Power BI Certified</span>
         </nav>
             <h1 className="text-4xl md:text-4xl font-extrabold text-gray-900 leading-tight mb-4">
             Data Analyst Course - Microsoft Power BI Certified
@@ -33,24 +32,24 @@ const CourseHeroSection = () => {
          Unlock your analytical potential and become a sought-after data processing expert. Our intensive training propels you to the heart of the Data Analytics universe, giving you complete mastery of Microsoft Power BI, an essential tool for excelling in this field. </p>
 
             {/* Buttons */}
-          <ActionButtons />
+          <ActionButtons1 />
 
             {/* Course Details List */}
             <div className="space-y-4">
               <div className="flex items-center text-gray-700 text-lg">
-                <FaClock className="mr-4 text-green-600 text-2xl" />
+                <FaClock className="mr-4 text-[#2D3353] text-2xl" />
                 <span><strong className="font-semibold">Duration:</strong> 20 weeks</span>
               </div>
               <div className="flex items-center text-gray-700 text-lg">
-                <FaCalendarAlt className="mr-4 text-green-600 text-2xl" />
+                <FaCalendarAlt className="mr-4 text-[#2D3353] text-2xl" />
                 <span><strong className="font-semibold">Schedule:</strong> 12 hours/week</span>
               </div>
               <div className="flex items-center text-gray-700 text-lg">
-                <FaBook className="mr-4 text-green-600 text-2xl" />
+                <FaBook className="mr-4 text-[#2D3353] text-2xl" />
                 <span><strong className="font-semibold">Format:</strong> Available in-person and online</span>
               </div>
               <div className="flex items-center text-gray-700 text-lg">
-                <FaMoon className="mr-4 text-green-600 text-2xl" />
+                <FaMoon className="mr-4 text-[#2D3353] text-2xl" />
                 <span><strong className="font-semibold">Options:</strong> Evening classes available</span>
               </div>
             </div>
@@ -193,7 +192,27 @@ const GenerativeAICourseDetails = () => {
     </div>
   );
 };
-
+const ActionButtons1 = ({ phoneNumber = '2347018952882', message = 'Hello, I would like to know more about the training.' }) => {
+    // WhatsApp link format: https://wa.me/PHONE_NUMBER?text=PRE_FILLED_MESSAGE
+    const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  
+    return (
+      <div className="flex flex-col sm:flex-row gap-4 mb-10">
+        {/* 1. WhatsApp Link Button (Changed from <button> to <a>) */}
+        <a 
+          href={whatsappLink}
+          target="_blank" // Opens the link in a new tab
+          rel="noopener noreferrer" // Security best practice for target="_blank"
+          className="flex items-center justify-center text-white px-12 py-4 bg-[#373435]   text-#66D7AE font-semibold rounded-lg text-lg  transition duration-300 shadow-md whitespace-nowrap" // Added whitespace-nowrap for better mobile layout
+        >
+          <FaWhatsapp className="mr-3 text-xl" /> Let's Talk
+        </a>
+        
+        {/* 2. Standard Button (Remains a <button>) */}
+       
+      </div>
+    );
+  };
 
 const ExpertSection = ({ imageUrl = ExpertImage }) => { // Added imageUrl prop with a default
   return (
@@ -209,21 +228,21 @@ const ExpertSection = ({ imageUrl = ExpertImage }) => { // Added imageUrl prop w
 
           <ul className="space-y-6">
             <li className="flex items-start text-gray-700">
-              <FaUsers className="mt-1 mr-3 text-green-600 text-2xl flex-shrink-0" />
+              <FaUsers className="mt-1 mr-3 text-[#2D3353] text-2xl flex-shrink-0" />
               <span>
                 Join small groups of 5 to 10 people for a personalized and
                 interaction-rich learning experience.
               </span>
             </li>
             <li className="flex items-start text-gray-700">
-              <FaBolt className="mt-1 mr-3 text-green-600 text-2xl flex-shrink-0" />
+              <FaBolt className="mt-1 mr-3 text-[#2D3353] text-2xl flex-shrink-0" />
               <span>
                 Benefit from the expertise and mentoring of our instructors
                 who will support you throughout your journey.
               </span>
             </li>
             <li className="flex items-start text-gray-700">
-              <FaGraduationCap className="mt-1 mr-3 text-green-600 text-2xl flex-shrink-0" />
+              <FaGraduationCap className="mt-1 mr-3 text-[#2D3353] text-2xl flex-shrink-0" />
               <span>
                 Receive support at every stage of your learning, from
                 introduction to advanced projects.

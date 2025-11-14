@@ -25,16 +25,16 @@ const Navbar1 = ({ activeSection, onNavClick }) => {
           {/* Desktop Navigation Links */}
           <div  className="hidden md:block">
             <div  className="ml-10 flex items-baseline space-x-4">
-              <a href="#" onClick={() => onNavClick('home')} className={`text-gray-400 hover:text-[#66D7AE] px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${activeSection === 'home' ? 'text-[#66D7AE] font-bold' : ''}`}>
+              <a href="#" onClick={() => onNavClick('home')} className={`text-#66D7AE-400 hover:text-#66D7AE px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${activeSection === 'home' ? 'text-[#66D7AE] font-bold' : ''}`}>
                 Home
               </a>
-              <a href="#about" onClick={() => onNavClick('about')} className={`text-gray-400 hover:text-[#66D7AE] px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${activeSection === 'about' ? 'text-[#66D7AE] font-bold' : ''}`}>
+              <a href="#about" onClick={() => onNavClick('about')} className={`text-#66D7AE-400 hover:text-#66D7AE px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${activeSection === 'about' ? 'text-[#66D7AE] font-bold' : ''}`}>
                 About Us
               </a>
-              <a href="#courses" onClick={() => onNavClick('services')} className={`text-gray-400 hover:text-[#66D7AE] px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${activeSection === 'services' ? 'text-[#66D7AE] font-bold' : ''}`}>
+              <a href="#courses" onClick={() => onNavClick('services')} className={`text-#66D7AE-400 hover:text-#66D7AE px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${activeSection === 'services' ? 'text-[#66D7AE] font-bold' : ''}`}>
                 Our Service
               </a>
-              <a href="#testimonials" onClick={() => onNavClick('testimonials')} className={`text-gray-400 hover:text-[#66D7AE] px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${activeSection === 'testimonials' ? 'text-[#66D7AE] font-bold' : ''}`}>
+              <a href="#testimonials" onClick={() => onNavClick('testimonials')} className={`text-#66D7AE-400 hover:text-#66D7AE px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${activeSection === 'testimonials' ? 'text-[#66D7AE] font-bold' : ''}`}>
                 Testimonials
               </a>
               
