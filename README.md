@@ -1,6 +1,6 @@
-# Modern Business Landing Page
+# Modern Educational Landing Page
 
-![modern-business-landing-page](/src/assets/react-busines-landing-page.png)
+![Buc Regal Tech Website](/src/assets/buc hero.png)
 
 A sleek and responsive landing page built with React, Tailwind CSS, and Framer Motion animations.
 
